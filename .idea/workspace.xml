@@ -18,6 +18,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -40,6 +43,7 @@
     "Application.WelcomeMain.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/1davi/Desktop/ManageMe/src/main/resources/com/example/manageme",
@@ -97,7 +101,7 @@
       <workItem from="1739021231925" duration="3453000" />
       <workItem from="1739036379295" duration="5113000" />
       <workItem from="1739119134717" duration="8373000" />
-      <workItem from="1754575680863" duration="24015000" />
+      <workItem from="1754575680863" duration="24612000" />
     </task>
     <servers />
   </component>

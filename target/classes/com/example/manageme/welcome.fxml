@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox fx:id="root" alignment="CENTER" prefHeight="580.0" prefWidth="900.0" spacing="20.0" style="-fx-background-color: FEFAE0;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.manageme.WelcomeController">
+<VBox fx:id="root" alignment="CENTER" prefHeight="580.0" prefWidth="900.0" spacing="20.0" style="-fx-background-color: FEFAE0;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.manageme.WelcomeController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <Pane prefHeight="159.0" prefWidth="860.0" style="-fx-background-color: FEFAE0;">
       <children>
-      
-          <Label alignment="CENTER" layoutX="272.0" layoutY="60.0" text="Benvenuto in ManageMe">
-            <font>
-               <Font name="Calibri Bold" size="30.0" />
-            </font>
-         </Label>
          <ToolBar layoutX="-1.0" layoutY="-3.0" prefHeight="54.0" prefWidth="860.0" style="-fx-background-color: FEFAE0;">
            <items>
              <Button id="ExitButton" alignment="CENTER" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="27.0" prefWidth="59.0" style="-fx-background-color: ff7b5a;" text="Esci" />
            </items>
          </ToolBar>
+         <ImageView fitHeight="82.0" fitWidth="300.0" layoutX="280.0" layoutY="24.0">
+            <image>
+               <Image url="@Media/ManageMe%20Logo%20t.png" />
+            </image>
+         </ImageView>
       </children>
    </Pane>
    <GridPane prefHeight="420.0" prefWidth="860.0">
