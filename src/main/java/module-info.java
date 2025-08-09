@@ -7,6 +7,7 @@ module com.example.manageme {
     requires javafx.graphics;
     requires javafx.base;
 
+
     opens com.example.manageme to javafx.fxml;
     exports com.example.manageme;
 }

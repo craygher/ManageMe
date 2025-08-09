@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="900.0" style="-fx-background-color: FEFAE0;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.manageme.HomeController">
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="900.0" style="-fx-background-color: FEFAE0;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.manageme.UsersController">
    <children>
       <GridPane prefHeight="40.0" prefWidth="900.0">
         <columnConstraints>
@@ -43,12 +43,12 @@
             <Pane prefHeight="40.0" prefWidth="491.0" style="-fx-background-color: E9EDC9;">
                <children>
                      <Button id="ExitButton" alignment="CENTER" layoutX="7.0" layoutY="7.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="27.0" prefWidth="59.0" style="-fx-background-color: ff7b5a;" text="Esci" />
-                  <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="291.0" layoutY="6.0">
+                  <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="291.0" layoutY="6.0" onMouseClicked="#changeToAddRem">
                      <image>
                         <Image url="@Media/warehouse-box_icon-icons.com_48371.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="31.0" fitWidth="44.0" layoutX="342.0" layoutY="5.0">
+                  <ImageView fitHeight="31.0" fitWidth="44.0" layoutX="342.0" layoutY="5.0" onMouseClicked="#changeToCharts">
                      <image>
                         <Image url="@Media/chart-icon-color.png" />
                      </image>
@@ -58,7 +58,7 @@
                         <Image url="@Media/person_118819.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="28.0" fitWidth="118.0" layoutX="92.0" layoutY="6.0">
+                  <ImageView fitHeight="28.0" fitWidth="118.0" layoutX="92.0" layoutY="6.0" onMouseClicked="#changeToHome">
                      <image>
                         <Image url="@Media/ManageMe%20Logo%20t.png" />
                      </image>
@@ -82,13 +82,51 @@
                   </TableView>
                </content>
             </ScrollPane>
-            <Label fx:id="LoggedUserLabel11" alignment="CENTER_RIGHT" layoutX="290.0" layoutY="35.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel11" alignment="CENTER" layoutX="289.0" layoutY="59.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Label>
-            <Text fill="#aeaeae" layoutX="268.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Premi invio per inserire" wrappingWidth="148.90781249999998" />
-            <TextField layoutX="268.0" layoutY="75.0" />
+            <TextField fx:id="CAddPers" layoutX="24.0" layoutY="124.0" promptText="Cognome" />
+            <Label fx:id="LoggedUserLabel111" alignment="CENTER" layoutX="54.0" layoutY="59.0" prefHeight="27.0" prefWidth="88.0" text="AGGIUNGI" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="LoggedUserLabel1111" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="PERSONE" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="LoggedUserLabel11111" alignment="CENTER" layoutX="10.0" layoutY="242.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="UTENTI" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="NAddPerso" layoutX="24.0" layoutY="92.0" promptText="Nome" />
+            <Button layoutX="77.0" layoutY="163.0" mnemonicParsing="false" onAction="#sendAddPers" style="-fx-background-color: D4DA94;" text="Invio" />
+            <TextField fx:id="IDRemPers" layoutX="255.0" layoutY="105.0" promptText="ID" />
+            <Button layoutX="310.0" layoutY="164.0" mnemonicParsing="false" onAction="#sendRemPers" style="-fx-background-color: D4DA94;" text="Invio" />
+            <Label fx:id="LoggedUserLabel112" alignment="CENTER" layoutX="289.0" layoutY="285.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="PassAddUt" layoutX="24.0" layoutY="350.0" promptText="Password" />
+            <Label fx:id="LoggedUserLabel1112" alignment="CENTER" layoutX="54.0" layoutY="285.0" prefHeight="27.0" prefWidth="88.0" text="AGGIUNGI" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="NUAddUt" layoutX="24.0" layoutY="318.0" promptText="Nome Utente" />
+            <Button fx:id="sendAddUt" layoutX="75.0" layoutY="420.0" mnemonicParsing="false" onAction="#sendAddUt" style="-fx-background-color: D4DA94;" text="Invio" />
+            <TextField fx:id="IDRemUt" layoutX="255.0" layoutY="331.0" promptText="ID" />
+            <TextField fx:id="id_associato" layoutX="24.0" layoutY="381.0" prefHeight="25.0" prefWidth="149.0" promptText="ID Persona Associata" />
+            <Button fx:id="sendRemUt" layoutX="310.0" layoutY="373.0" mnemonicParsing="false" onAction="#sendRemUt" style="-fx-background-color: D4DA94;" text="Invio" />
+            <Text fx:id="reportAddPers" fill="#999999" layoutX="6.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.80001831054688" />
+            <Text fx:id="reportRemPers" fill="#999999" layoutX="239.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.80001831054688" />
+            <Text fx:id="reportAddUt" fill="#999999" layoutX="13.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="172.53673553466797" />
+            <Text fx:id="reportRemUt" fill="#999999" layoutX="247.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="172.53673553466797" />
          </children></Pane>
    </children>
 </VBox>
