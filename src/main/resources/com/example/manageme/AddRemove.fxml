@@ -112,16 +112,6 @@
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Button>
-            <Label fx:id="LoggedUserLabel12" layoutX="180.0" layoutY="14.0" prefHeight="27.0" prefWidth="100.0" text="DEPOSITO" textAlignment="CENTER">
-               <font>
-                  <Font name="Calibri Bold" size="22.0" />
-               </font>
-            </Label>
-            <Label fx:id="LoggedUserLabel121" layoutX="180.0" layoutY="256.0" prefHeight="27.0" prefWidth="100.0" text="PRODOTTI" textAlignment="CENTER">
-               <font>
-                  <Font name="Calibri Bold" size="22.0" />
-               </font>
-            </Label>
             <TextField fx:id="BCProdAdd" layoutX="25.0" layoutY="362.0" />
             <Text fill="#aeaeae" layoutX="25.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
             <TextField fx:id="NPProdAdd" layoutX="25.0" layoutY="415.0" />
@@ -150,6 +140,16 @@
             </Label>
             <Text fx:id="reportAddProd" fill="#aeaeae" layoutX="17.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="165.70780029296873" />
             <Text fx:id="reportRemProd" fill="#aeaeae" layoutX="251.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="197.70780029296873" />
+            <Label fx:id="LoggedUserLabel1111" alignment="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="DEPOSITO" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="LoggedUserLabel11111" alignment="CENTER" layoutX="17.0" layoutY="255.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="PRODOTTI" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
          </children></Pane>
    </children>
 </VBox>

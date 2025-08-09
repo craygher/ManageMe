@@ -265,8 +265,8 @@ public class DepositoController {
             Stage stage = (Stage) root.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("Users.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 900, 580);
-            HomeController homeController = fxmlLoader.getController();
-            homeController.initialize(db);
+            UsersController usersController = fxmlLoader.getController();
+            usersController.initialize(db);
             stage.setResizable(false);
             stage.setTitle("ManageMe");
             stage.setScene(scene);

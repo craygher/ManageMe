@@ -95,12 +95,12 @@
             </Label>
             <Label fx:id="LoggedUserLabel1111" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="PERSONE" textAlignment="CENTER">
                <font>
-                  <Font name="Calibri Bold" size="18.0" />
+                  <Font name="Calibri Bold" size="22.0" />
                </font>
             </Label>
             <Label fx:id="LoggedUserLabel11111" alignment="CENTER" layoutX="10.0" layoutY="242.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="UTENTI" textAlignment="CENTER">
                <font>
-                  <Font name="Calibri Bold" size="18.0" />
+                  <Font name="Calibri Bold" size="22.0" />
                </font>
             </Label>
             <TextField fx:id="NAddPerso" layoutX="24.0" layoutY="92.0" promptText="Nome" />

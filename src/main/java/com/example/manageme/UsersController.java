@@ -115,7 +115,7 @@ public class UsersController {
     @FXML
     protected void sendAddPers(){
         String nome= NAddPerso.getText();
-        String cognome= NAddPerso.getText();
+        String cognome= CAddPers.getText();
 
         if(nome.isEmpty()||cognome.isEmpty()){
             reportAddPers.setText("Impossibile Inviare: Riempi Correttamente tutti i Campi!");
