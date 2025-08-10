@@ -239,8 +239,8 @@ public class UsersController {
             Stage stage = (Stage) root.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("Charts.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 900, 580);
-            HomeController homeController = fxmlLoader.getController();
-            homeController.initialize(db);
+            ChartsController chartsController = fxmlLoader.getController();
+            chartsController.initialize(db);
             stage.setResizable(false);
             stage.setTitle("ManageMe");
             stage.setScene(scene);

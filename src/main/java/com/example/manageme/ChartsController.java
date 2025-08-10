@@ -3,17 +3,20 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
+import javafx.scene.Scene;
+import javafx.scene.chart.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import java.net.URL;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
+import java.sql.*;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -33,48 +36,32 @@ public class ChartsController implements Initializable{
     private BarChart<String, Number> TopSellChart;
 
     @FXML
-    private CategoryAxis xAxis;
+    private CategoryAxis xAxisTopSellChart;
 
     @FXML
-    private NumberAxis yAxis;
+    private NumberAxis yAxisTopSellChart;
+
+
+
+    @FXML
+    private BarChart<String, Number> LowerSellChart;
+
+    @FXML
+    private CategoryAxis xAxisLowerSellChart;
+
+    @FXML
+    private NumberAxis yAxisLowerSellChart;
+
 
 
     protected void initialize(DBConnection db){
         LoggedUserLabel.setText("User: "+DBConnection.LoggedUser);
         this.db=db;
+        topVenditeBarChart();
+        lowerVenditeBarChart();
     }
 
-    public void initialize(URL location, ResourceBundle resources) {
-
-        // Configura gli assi
-        xAxis.setLabel("Prodotto");
-        yAxis.setLabel("Vendite");
-
-        // Crea le serie di dati
-        XYChart.Series<String, Number> series1 = new XYChart.Series<>();
-        series1.setName("");
-        series1.getData().add(new XYChart.Data<>("Gennaio", 200));
-        series1.getData().add(new XYChart.Data<>("Febbraio", 500));
-        series1.getData().add(new XYChart.Data<>("Marzo", 300));
-        series1.getData().add(new XYChart.Data<>("Aprile", 600));
-
-        /*XYChart.Series<String, Number> series2 = new XYChart.Series<>();
-        series2.setName("2024");
-        series2.getData().add(new XYChart.Data<>("Gennaio", 400));
-        series2.getData().add(new XYChart.Data<>("Febbraio", 200));
-        series2.getData().add(new XYChart.Data<>("Marzo", 800));
-        series2.getData().add(new XYChart.Data<>("Aprile", 500));*/
-
-        // Aggiungi le serie al grafico
-        TopSellChart.getData().addAll(series1);
-
-        // Stile opzionale
-        TopSellChart.setTitle("TOP 5 Prodotti più venduti");
-        TopSellChart.setLegendVisible(true);
-    }
-
-
-
+    public void initialize(URL location, ResourceBundle resources) {}
     @FXML
     protected void onExitButtonClick(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -91,6 +78,102 @@ public class ChartsController implements Initializable{
             }
         }
     }
+
+
+
+    protected void topVenditeBarChart(){
+        xAxisTopSellChart.setLabel("Prodotto");
+        yAxisTopSellChart.setLabel("Vendite");
+        XYChart.Series<String, Number> series1 = new XYChart.Series<>();
+        String query="SELECT p.Nome_prodotto,count(d.Data_Ora_Uscita) Venduto FROM deposito d JOIN prodotto p ON d.BarCode = p.BarCode GROUP BY p.Nome_prodotto ORDER BY Venduto DESC LIMIT 5;";
+        try {
+            ResultSet rs=db.getDeposito(query);
+            while(rs.next()){
+                series1.getData().add(new XYChart.Data<>(rs.getString(1), Integer.parseInt(rs.getString(2))));
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        // Aggiungi le serie al grafico
+        TopSellChart.getData().addAll(series1);
+        // Stile opzionale
+        TopSellChart.setTitle("TOP 5 Prodotti più venduti");
+        TopSellChart.setLegendVisible(false);
+    }
+
+    protected void lowerVenditeBarChart(){
+        xAxisLowerSellChart.setLabel("Prodotto");
+        yAxisLowerSellChart.setLabel("Vendite");
+        XYChart.Series<String, Number> series1 = new XYChart.Series<>();
+        String query="SELECT p.Nome_prodotto,count(d.Data_Ora_Uscita) Venduto FROM deposito d JOIN prodotto p ON d.BarCode = p.BarCode GROUP BY p.Nome_prodotto ORDER BY Venduto ASC LIMIT 5;";
+        try {
+            ResultSet rs=db.getDeposito(query);
+            while(rs.next()){
+                series1.getData().add(new XYChart.Data<>(rs.getString(1), Integer.parseInt(rs.getString(2))));
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        // Aggiungi le serie al grafico
+        LowerSellChart.getData().addAll(series1);
+        // Stile opzionale
+        LowerSellChart.setTitle("TOP 5 Prodotti meno venduti");
+        LowerSellChart.setLegendVisible(false);
+    }
+
+    @FXML
+    private void changeToAddRemove(){
+        try{
+            Stage stage = (Stage) root.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("AddRemove.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
+            DepositoController depositoController = fxmlLoader.getController();
+            depositoController.initialize(db);
+            stage.setResizable(false);
+            stage.setTitle("ManageMe");
+            stage.setScene(scene);
+            stage.show();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
+    @FXML
+    private void changeToUsers(){
+        try{
+            Stage stage = (Stage) root.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("Users.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
+            UsersController usersController = fxmlLoader.getController();
+            usersController.initialize(db);
+            stage.setResizable(false);
+            stage.setTitle("ManageMe");
+            stage.setScene(scene);
+            stage.show();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void changeToHome(){
+        try{
+            Stage stage = (Stage) root.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("Home.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 900, 580);
+            HomeController homeController = fxmlLoader.getController();
+            homeController.initialize(db);
+            stage.setResizable(false);
+            stage.setTitle("ManageMe");
+            stage.setScene(scene);
+            stage.show();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
 
 
 }

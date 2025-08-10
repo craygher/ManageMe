@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -82,58 +83,58 @@
                   </TableView>
                </content>
             </ScrollPane>
-            <Label fx:id="LoggedUserLabel1" alignment="CENTER" layoutX="55.0" layoutY="55.0" prefHeight="27.0" prefWidth="88.0" text="AGGIUNGI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel1" alignment="CENTER" layoutX="55.0" layoutY="41.0" prefHeight="27.0" prefWidth="88.0" text="AGGIUNGI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="LoggedUserLabel11" alignment="CENTER" layoutX="295.0" layoutY="55.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel11" alignment="CENTER" layoutX="295.0" layoutY="41.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="BCFieldAdd" layoutX="25.0" layoutY="99.0" />
+            <TextField fx:id="BCFieldAdd" layoutX="25.0" layoutY="85.0" />
             <Text fx:id="reportAdd" fill="#aeaeae" layoutX="14.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.10782470703123" />
-            <TextField fx:id="QNTadd" layoutX="25.0" layoutY="150.0" prefHeight="25.0" prefWidth="44.0" text="1" />
-            <Text fill="#aeaeae" layoutX="25.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
-            <Text fill="#aeaeae" layoutX="25.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantità" wrappingWidth="148.90781249999998" />
-            <TextField fx:id="BCFieldRemove" layoutX="264.0" layoutY="99.0" />
-            <TextField fx:id="QNTremove" layoutX="264.0" layoutY="148.0" prefHeight="25.0" prefWidth="44.0" text="1" />
-            <Text fill="#aeaeae" layoutX="264.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
-            <Text fill="#aeaeae" layoutX="264.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantità" wrappingWidth="148.90781249999998" />
-            <Button id="sendAdd" layoutX="108.0" layoutY="143.0" mnemonicParsing="false" onAction="#sendAdd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
+            <TextField fx:id="QNTadd" layoutX="25.0" layoutY="136.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+            <Text fill="#aeaeae" layoutX="25.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
+            <Text fill="#aeaeae" layoutX="25.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantità" wrappingWidth="148.90781249999998" />
+            <TextField fx:id="BCFieldRemove" layoutX="264.0" layoutY="85.0" />
+            <TextField fx:id="QNTremove" layoutX="264.0" layoutY="134.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+            <Text fill="#aeaeae" layoutX="264.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
+            <Text fill="#aeaeae" layoutX="264.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantità" wrappingWidth="148.90781249999998" />
+            <Button id="sendAdd" layoutX="108.0" layoutY="129.0" mnemonicParsing="false" onAction="#sendAdd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Button>
             <Text fx:id="reportRemove" fill="#aeaeae" layoutX="264.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="191.30783691406248" />
-            <Button id="sendRem" layoutX="350.0" layoutY="141.0" mnemonicParsing="false" onAction="#sendRem" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
+            <Button id="sendRem" layoutX="350.0" layoutY="127.0" mnemonicParsing="false" onAction="#sendRem" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Button>
-            <TextField fx:id="BCProdAdd" layoutX="25.0" layoutY="362.0" />
-            <Text fill="#aeaeae" layoutX="25.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
-            <TextField fx:id="NPProdAdd" layoutX="25.0" layoutY="415.0" />
-            <Text fill="#aeaeae" layoutX="25.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Prodotto" wrappingWidth="148.90781249999998" />
-            <Button id="sendAddProd" layoutX="67.0" layoutY="460.0" mnemonicParsing="false" onAction="#sendAddProd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
+            <TextField fx:id="BCProdAdd" layoutX="25.0" layoutY="384.0" />
+            <Text fill="#aeaeae" layoutX="25.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
+            <TextField fx:id="NPProdAdd" layoutX="25.0" layoutY="423.0" />
+            <Text fill="#aeaeae" layoutX="25.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Prodotto" wrappingWidth="148.90781249999998" />
+            <Button id="sendAddProd" layoutX="66.0" layoutY="456.0" mnemonicParsing="false" onAction="#sendAddProd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Button>
-            <TextField fx:id="BCProdRem" layoutX="265.0" layoutY="394.0" />
-            <Text fill="#aeaeae" layoutX="265.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
-            <Button id="sendRemProd" layoutX="306.0" layoutY="460.0" mnemonicParsing="false" onAction="#sendRemProd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
+            <TextField fx:id="BCProdRem" layoutX="260.0" layoutY="384.0" />
+            <Text fill="#aeaeae" layoutX="260.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
+            <Button id="sendRemProd" layoutX="302.0" layoutY="417.0" mnemonicParsing="false" onAction="#sendRemProd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Button>
-            <Label fx:id="LoggedUserLabel13" alignment="CENTER" layoutX="55.0" layoutY="314.0" prefHeight="27.0" prefWidth="88.0" text="AGGIUNGI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel13" alignment="CENTER" layoutX="55.0" layoutY="338.0" prefHeight="27.0" prefWidth="88.0" text="AGGIUNGI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="LoggedUserLabel111" alignment="CENTER" layoutX="291.0" layoutY="314.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel111" alignment="CENTER" layoutX="291.0" layoutY="338.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
@@ -145,11 +146,24 @@
                   <Font name="Calibri Bold" size="22.0" />
                </font>
             </Label>
-            <Label fx:id="LoggedUserLabel11111" alignment="CENTER" layoutX="17.0" layoutY="255.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="PRODOTTI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel11111" alignment="CENTER" layoutX="17.0" layoutY="297.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="PRODOTTI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="22.0" />
                </font>
             </Label>
+            <Label fx:id="LoggedUserLabel11112" alignment="CENTER" layoutX="16.0" layoutY="176.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="VENDITA" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
+            <TextField layoutX="25.0" layoutY="256.0" />
+            <Label fx:id="LoggedUserLabel12" alignment="CENTER" layoutX="11.0" layoutY="209.0" prefHeight="27.0" prefWidth="171.0" text="FAST SCAN BARCODE" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text fill="#aeaeae" layoutX="25.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
+            <TextArea layoutX="230.0" layoutY="201.0" prefHeight="91.0" prefWidth="132.0" />
          </children></Pane>
    </children>
 </VBox>

@@ -16,12 +16,6 @@ public class DBConnection {
         if(conn == null){
             conn = DriverManager.getConnection(url, user, password);
         }
-        String query="Select * from persona";
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery(query);
-        while(rs.next()){}
-
-
         return conn;
     }
 
