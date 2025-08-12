@@ -142,7 +142,11 @@ public class DepositoController {
         }
         updateTable("SELECT d.id,d.nome_utente,p.Nome_Prodotto,d.barcode, count(d.barcode) Quantità,d.Data_Ora_Inserimento,d.Data_Ora_Uscita FROM deposito d JOIN prodotto p ON p.BarCode = d.BarCode WHERE d.Data_Ora_Uscita IS NULL\n" +
                 "GROUP BY d.BarCode;");
+
+        BCFieldAdd.clear();
+        QNTadd.clear();
     }
+
     @FXML
     protected void sendRem(){
         String barcode= BCFieldRemove.getText();
@@ -152,7 +156,11 @@ public class DepositoController {
             reportRemove.setText("Impossibile Inviare: Riempi Correttamente tutti i Campi!");
             return;
         }
-        String query = "DELETE FROM deposito WHERE Barcode = ? ORDER BY Data_Ora_inserimento DESC LIMIT 1";
+        String query = "USE managemedb;\n" +
+                "UPDATE deposito\n" +
+                "SET Data_Ora_Uscita = NOW()\n" +
+                "WHERE BARCODE = ? AND Data_Ora_Uscita IS NULL\n" +
+                "LIMIT 1;";
         for(int i=0;i<quantita;i++) {
             try (PreparedStatement stmt = DBConnection.conn.prepareStatement(query)) {
 
@@ -170,6 +178,9 @@ public class DepositoController {
         }
         updateTable("SELECT d.id,d.nome_utente,p.Nome_Prodotto,d.barcode, count(d.barcode) Quantità,d.Data_Ora_Inserimento,d.Data_Ora_Uscita FROM deposito d JOIN prodotto p ON p.BarCode = d.BarCode WHERE d.Data_Ora_Uscita IS NULL\n" +
                 "GROUP BY d.BarCode;");
+
+        BCFieldRemove.clear();
+        QNTremove.clear();
     }
 
 
@@ -199,6 +210,8 @@ public class DepositoController {
             }
 
         updateTable("SELECT * from prodotto");
+        BCProdAdd.clear();
+        NPProdAdd.clear();
 
     }
 
@@ -238,6 +251,7 @@ public class DepositoController {
                 e.printStackTrace();
             }
         updateTable("SELECT * from prodotto");
+        BCProdRem.clear();
     }
 
 

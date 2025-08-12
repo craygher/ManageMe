@@ -69,9 +69,9 @@
       </GridPane>
       <Pane prefHeight="537.0" prefWidth="900.0">
          <children>
-            <ScrollPane fitToWidth="true" layoutX="459.0" layoutY="14.0" prefHeight="510.0" prefWidth="425.0">
+            <ScrollPane fitToWidth="true" layoutX="459.0" layoutY="14.0" prefHeight="514.0" prefWidth="425.0">
                <content>
-                  <TableView fx:id="TabellaDeposito" prefHeight="509.0" prefWidth="410.0" style="-fx-background-color: E9EDC9;">
+                  <TableView fx:id="TabellaDeposito" prefHeight="514.0" prefWidth="410.0" style="-fx-background-color: E9EDC9;">
                     <columns>
                       <TableColumn id="colId" prefWidth="32.80011063814163" text="ID" />
                       <TableColumn id="colUtente" prefWidth="49.599971771240234" text="Utente" />
@@ -82,70 +82,70 @@
                   </TableView>
                </content>
             </ScrollPane>
-            <Label fx:id="LoggedUserLabel1" alignment="CENTER" layoutX="55.0" layoutY="55.0" prefHeight="27.0" prefWidth="88.0" text="AGGIUNGI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel1" alignment="CENTER" layoutX="53.0" layoutY="63.0" prefHeight="27.0" prefWidth="88.0" text="AGGIUNGI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="LoggedUserLabel11" alignment="CENTER" layoutX="295.0" layoutY="55.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel11" alignment="CENTER" layoutX="293.0" layoutY="63.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="BCFieldAdd" layoutX="25.0" layoutY="99.0" />
-            <Text fx:id="reportAdd" fill="#aeaeae" layoutX="14.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.10782470703123" />
-            <TextField fx:id="QNTadd" layoutX="25.0" layoutY="150.0" prefHeight="25.0" prefWidth="44.0" text="1" />
-            <Text fill="#aeaeae" layoutX="25.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
-            <Text fill="#aeaeae" layoutX="25.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantità" wrappingWidth="148.90781249999998" />
-            <TextField fx:id="BCFieldRemove" layoutX="264.0" layoutY="99.0" />
-            <TextField fx:id="QNTremove" layoutX="264.0" layoutY="148.0" prefHeight="25.0" prefWidth="44.0" text="1" />
-            <Text fill="#aeaeae" layoutX="264.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
-            <Text fill="#aeaeae" layoutX="264.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantità" wrappingWidth="148.90781249999998" />
-            <Button id="sendAdd" layoutX="108.0" layoutY="143.0" mnemonicParsing="false" onAction="#sendAdd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
+            <TextField fx:id="BCFieldAdd" layoutX="23.0" layoutY="107.0" />
+            <Text fx:id="reportAdd" fill="#aeaeae" layoutX="14.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.10782470703123" />
+            <TextField fx:id="QNTadd" layoutX="23.0" layoutY="158.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+            <Text fill="#aeaeae" layoutX="23.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
+            <Text fill="#aeaeae" layoutX="23.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantità" wrappingWidth="148.90781249999998" />
+            <TextField fx:id="BCFieldRemove" layoutX="262.0" layoutY="107.0" />
+            <TextField fx:id="QNTremove" layoutX="262.0" layoutY="156.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+            <Text fill="#aeaeae" layoutX="262.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
+            <Text fill="#aeaeae" layoutX="262.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantità" wrappingWidth="148.90781249999998" />
+            <Button id="sendAdd" layoutX="106.0" layoutY="151.0" mnemonicParsing="false" onAction="#sendAdd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Button>
-            <Text fx:id="reportRemove" fill="#aeaeae" layoutX="264.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="191.30783691406248" />
-            <Button id="sendRem" layoutX="350.0" layoutY="141.0" mnemonicParsing="false" onAction="#sendRem" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
+            <Text fx:id="reportRemove" fill="#aeaeae" layoutX="251.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="193.4000854492184" />
+            <Button id="sendRem" layoutX="348.0" layoutY="149.0" mnemonicParsing="false" onAction="#sendRem" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Button>
-            <TextField fx:id="BCProdAdd" layoutX="25.0" layoutY="362.0" />
-            <Text fill="#aeaeae" layoutX="25.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
-            <TextField fx:id="NPProdAdd" layoutX="25.0" layoutY="415.0" />
-            <Text fill="#aeaeae" layoutX="25.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Prodotto" wrappingWidth="148.90781249999998" />
-            <Button id="sendAddProd" layoutX="67.0" layoutY="460.0" mnemonicParsing="false" onAction="#sendAddProd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
+            <TextField fx:id="BCProdAdd" layoutX="23.0" layoutY="363.0" />
+            <Text fill="#aeaeae" layoutX="23.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
+            <TextField fx:id="NPProdAdd" layoutX="23.0" layoutY="402.0" />
+            <Text fill="#aeaeae" layoutX="23.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Prodotto" wrappingWidth="148.90781249999998" />
+            <Button id="sendAddProd" layoutX="67.0" layoutY="441.0" mnemonicParsing="false" onAction="#sendAddProd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Button>
-            <TextField fx:id="BCProdRem" layoutX="265.0" layoutY="394.0" />
-            <Text fill="#aeaeae" layoutX="265.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
-            <Button id="sendRemProd" layoutX="306.0" layoutY="460.0" mnemonicParsing="false" onAction="#sendRemProd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
+            <TextField fx:id="BCProdRem" layoutX="264.0" layoutY="366.0" />
+            <Text fill="#aeaeae" layoutX="264.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARCODE" wrappingWidth="148.90781249999998" />
+            <Button id="sendRemProd" layoutX="307.0" layoutY="406.0" mnemonicParsing="false" onAction="#sendRemProd" prefHeight="40.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: D4DA94;" text="Invio">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Button>
-            <Label fx:id="LoggedUserLabel13" alignment="CENTER" layoutX="55.0" layoutY="314.0" prefHeight="27.0" prefWidth="88.0" text="AGGIUNGI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel13" alignment="CENTER" layoutX="56.0" layoutY="308.0" prefHeight="27.0" prefWidth="88.0" text="AGGIUNGI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="LoggedUserLabel111" alignment="CENTER" layoutX="291.0" layoutY="314.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel111" alignment="CENTER" layoutX="295.0" layoutY="308.0" prefHeight="27.0" prefWidth="88.0" text="RIMUOVI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
             </Label>
-            <Text fx:id="reportAddProd" fill="#aeaeae" layoutX="17.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="165.70780029296873" />
-            <Text fx:id="reportRemProd" fill="#aeaeae" layoutX="251.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="197.70780029296873" />
+            <Text fx:id="reportAddProd" fill="#aeaeae" layoutX="17.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="165.70780029296873" />
+            <Text fx:id="reportRemProd" fill="#aeaeae" layoutX="258.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="183.80004882812477" />
             <Label fx:id="LoggedUserLabel1111" alignment="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="DEPOSITO" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="22.0" />
                </font>
             </Label>
-            <Label fx:id="LoggedUserLabel11111" alignment="CENTER" layoutX="17.0" layoutY="255.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="PRODOTTI" textAlignment="CENTER">
+            <Label fx:id="LoggedUserLabel11111" alignment="CENTER" layoutX="18.0" layoutY="255.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: E9EDC9; -fx-background-radius: 30;" text="PRODOTTI" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="22.0" />
                </font>

@@ -138,6 +138,8 @@ public class UsersController {
         }
 
         updateTable("SELECT * FROM persona");
+        NAddPerso.clear();
+        CAddPers.clear();
     }
 
     @FXML
@@ -164,6 +166,8 @@ public class UsersController {
                 e.printStackTrace();
             }
         updateTable("SELECT * FROM persona");
+        IDRemPers.clear();
+
     }
 
     @FXML
@@ -199,6 +203,9 @@ public class UsersController {
         }
 
         updateTable("SELECT u.Nome_utente, u.Data_iscrizione,p.nome,p.cognome FROM Utente u JOIN Persona p ON u.id_persona = p.id");
+        NUAddUt.clear();
+        PassAddUt.clear();
+        id_associato.clear();
     }
 
     @FXML
@@ -225,6 +232,7 @@ public class UsersController {
             e.printStackTrace();
         }
         updateTable("SELECT u.Nome_utente, u.Data_iscrizione,p.nome,p.cognome FROM Utente u JOIN Persona p ON u.id_persona = p.id");
+        IDRemUt.clear();
     }
 
 

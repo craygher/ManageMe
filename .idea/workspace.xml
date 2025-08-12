@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1302ced1-132f-42a0-a19e-32883350e247" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/manageme/ChartsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/manageme/ChartsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/manageme/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/manageme/DBConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/manageme/DepositoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/manageme/DepositoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/manageme/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/manageme/UsersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/manageme/AddRemove.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/manageme/AddRemove.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/manageme/Charts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/manageme/Charts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/manageme/Charts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/manageme/Charts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/manageme/ChartsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/manageme/ChartsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/manageme/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/manageme/DBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/manageme/DepositoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/manageme/DepositoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/manageme/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/manageme/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/manageme/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/manageme/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/manageme/WelcomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/manageme/WelcomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/manageme/WelcomeMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/manageme/WelcomeMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/manageme/AddRemove.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/manageme/AddRemove.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,29 +42,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "Application.WelcomeMain.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/1davi/Desktop/ManageMe/src/main/resources/com/example/manageme",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.22145669",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WelcomeMain.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/1davi/Desktop/ManageMe/src/main/resources/com/example/manageme&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.22145669&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\1davi\Desktop\ManageMe\src\main\resources\com\example\manageme" />
@@ -126,7 +113,8 @@
       <workItem from="1739036379295" duration="5113000" />
       <workItem from="1739119134717" duration="8373000" />
       <workItem from="1754575680863" duration="42044000" />
-      <workItem from="1754848717796" duration="8434000" />
+      <workItem from="1754848717796" duration="11316000" />
+      <workItem from="1755008904389" duration="2209000" />
     </task>
     <servers />
   </component>
