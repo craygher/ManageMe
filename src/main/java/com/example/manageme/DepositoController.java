@@ -156,15 +156,16 @@ public class DepositoController {
             reportRemove.setText("Impossibile Inviare: Riempi Correttamente tutti i Campi!");
             return;
         }
-        String query = "USE managemedb;\n" +
-                "UPDATE deposito\n" +
-                "SET Data_Ora_Uscita = NOW()\n" +
+        String query = "UPDATE deposito\n" +
+                "SET Data_Ora_Uscita = ?\n" +
                 "WHERE BARCODE = ? AND Data_Ora_Uscita IS NULL\n" +
                 "LIMIT 1;";
         for(int i=0;i<quantita;i++) {
             try (PreparedStatement stmt = DBConnection.conn.prepareStatement(query)) {
 
-                stmt.setString(1, barcode);
+
+                stmt.setTimestamp(1, Timestamp.valueOf(java.time.LocalDateTime.now()));
+                stmt.setString(2, barcode);
 
                 int righeDel = stmt.executeUpdate();
 
